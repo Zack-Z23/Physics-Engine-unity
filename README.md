@@ -6,3 +6,6 @@ Finished the physics of making the object move up and down in a natural curve wh
 
 
 Torque with angular velocity in upcoming updates
+
+
+vrel
