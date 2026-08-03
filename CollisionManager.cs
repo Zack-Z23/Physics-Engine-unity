@@ -17,8 +17,9 @@ public class CollisionManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        //vrel gonna be calculated after the if statement
         Vector3 closestPoint = box.ClosestPoint(physics.transform.position);
         float distance = Vector3.Distance(physics.transform.position, closestPoint);
 
@@ -34,8 +35,14 @@ public class CollisionManager : MonoBehaviour
 
             Vector3 spinAxis = Vector3.Cross(normal, tangentVelocity);
 
-            physics.velocity = Vector3.Reflect(physics.velocity, normal) * bounce;
 
+            if (normalSpeed < 0)
+            {
+                physics.velocity = Vector3.Reflect(physics.velocity, normal) * bounce;
+            }
+            else{
+                physics.velocity = physics.velocity - normalVelocity;
+            }
             physics.AddTorque(spinAxis * 0.5f);
 
 
