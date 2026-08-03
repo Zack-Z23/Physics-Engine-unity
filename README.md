@@ -8,4 +8,5 @@ Finished the physics of making the object move up and down in a natural curve wh
 Torque with angular velocity in upcoming updates
 
 
-vrel calculation after the program checks for whether the object is touching the surface
+vrel calculation after the program checks for whether the object is touching the surface or needs to reflect
+
