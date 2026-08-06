@@ -13,3 +13,6 @@ vrel calculation after the program checks for whether the object is touching the
 Constant Distance added. Works well but the balls still phase through each other
 
 Finishing up Constant Distance
+
+
+Adding rotational physics 
